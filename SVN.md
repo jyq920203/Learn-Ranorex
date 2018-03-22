@@ -41,3 +41,8 @@ Windows Explorer Shell 支持 Overlay Icon 最多 15 个，Windows 自身已经�
 
 # svn图标的含义
 可以右击进入svn的setting中，有一项是Icon Set中可以查看
+
+# 如何回滚到某一个版本
+右击查看TortoiseSVN -> Show log，两种选择一种选择是revert to this revision（回退到这一个版本中，这个版本之后的版本都会被删除），或者是Revert changes from these revision（删除中间几个版本）
+
+
