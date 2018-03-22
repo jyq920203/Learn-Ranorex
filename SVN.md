@@ -38,7 +38,3 @@
 **解决方法四（成功）：**
 
 Windows Explorer Shell 支持 Overlay Icon 最多 15 个，Windows 自身已经使用了 4 个，所以就只剩下了 11 个 供我们使用。如果你之前安装了例如 Groove 这样的软件，那么可能我们可利用的就更少了，轮不到 Tortoise 了。像这样的情况，我们可以调整 Tortoise 图标名称的字母顺序，来提高 Tortoise 的优先位置，因为 Windows 内部就是安装名称的字母顺序来优先显示的。  解决的步骤  在 运行里 输入 regedit 进入 注册表 界面，HKEY_LOCAL_MACHINE->SOFTWARE->Microsoft->Windows->CurrentVersion->Explorer->ShellIconOverlayIdentifiers 打开后发现 Tortoise 系列（1TortoiseNormal，2TortoiseAdded 等）前面有好多项，Tortoise 系列排到了 15 名之后，难怪不显示。现在的任务就是把它们提到前面了，修改一下它们的名字就好（我是看第一项的前缀是空格，说明空格的字符排序在前面，我就加了几个空格），我改后的名字如（    TortoiseNormal，    TortoiseAdded 等），然后关闭再打开注册表，发现 Tortoise 系列系列图标已经排到前面了，这时 SVN 的图标并没有显示，靠，重启 Explorer（在任务管理器中结束 explorer.exe，在文件 -> 新建任务 -> 输入 explorer，当然可以重启电脑，不过好 sb），这样就 ok 了，可爱的 SVN 图标又出现了。
-
-**总结：**
-
-原因可能是因为我安装了好多的同步网盘（金山快盘，酷盘，everbox，百度网盘，dropbox 等）占用了 15 Overlay Icon，怪不得有的同步网盘的状态图标不显示呢。但是这样 SVN 的图标是显示了，但是肯定其他什么软件的图标又会不显示了。
